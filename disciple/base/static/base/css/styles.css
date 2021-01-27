@@ -1,16 +1,20 @@
 
 h1 {
   color: #5C5C66;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   text-align: center;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .flexbox {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .content {
@@ -29,7 +33,8 @@ body {
 
 .button {
   display: block;
-  border-radius: 10px;
+  border-radius: 50px;
+  border: 5px #5C5C66 solid;
   padding: 5px;
   background: #5C5C66;
   color: white;
@@ -39,4 +44,64 @@ body {
   text-decoration: none;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.ghost_button {
+  display: block;
+  border-radius: 50px;
+  border: 5px #5C5C66 solid;
+  padding: 5px;
+  background: white;
+  color: #5C5C66;
+  width: 228px;
+  height: 39px;
+  line-height: 39px;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+label {
+  float:left;
+  color: #5C5C66;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.input_field {
+  border: 1px black solid;
+  background-color: none;
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.login_form {
+  /* border: red solid 1px; */
+  width: 300px;
+}
+
+input .button {
+  border: 1px solid red;
+  height: 39px;
+}
+
+.input_button {
+  border: 5px solid #5C5C66;
+  padding: 5px;
+  height: 49px;
+  width: 100%;
+  border-radius: 50px;
+  background: #5C5C66;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
 }
