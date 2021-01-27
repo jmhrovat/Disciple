@@ -15,6 +15,6 @@ class SignUpView(View):
 
 
 @login_required
-def user_home(request):
+def user_home_view(request):
     return render(request, 'users/home.html')
 

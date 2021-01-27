@@ -6,3 +6,5 @@ __pycache__/
 *.pyc
 *.sqlite3
 disciple/disciple/__pycache__/urls.cpython-37.pyc
+htmlcov/
+.coverage
