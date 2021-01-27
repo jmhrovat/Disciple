@@ -8,3 +8,6 @@ __pycache__/
 disciple/disciple/__pycache__/urls.cpython-37.pyc
 htmlcov/
 .coverage
+disciple/db.sqlite3
+disciple/users/__pycache__/urls.cpython-37.pyc
+disciple/users/__pycache__/views.cpython-37.pyc
