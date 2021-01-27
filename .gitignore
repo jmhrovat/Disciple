@@ -1,2 +1,5 @@
 
 disciple/disciple/local_settings.py
+disciple/db.sqlite3
+*.pyc
+__pycache__/

@@ -1,17 +1,45 @@
-<h1>Log in Form</h1>
+{% load static %}
 
-<div class="yada">
-  <form action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-    <label>Username</label>
-    {{ form.username }}
+<!DOCTYPE html>
 
-    <label>Password</label>
-    {{ form.password }}
+<!-- Main CSS File -->
+<link rel="stylesheet" href= {% static "base/css/styles.css"%}>
 
-    <input type="submit" value="Login">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
 
-    {{ form.errors }}
-  </form>
+<body>
 
-</div>
+  <div class="flexbox">
+    <div class="content">
+      <img class="logo"src="{% static 'base/logo.jpg'%}" alt="logo">
+      <h1>Disciple</h1>
+      <form class="login_form" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <label>Username</label>
+        <br>
+        {{ form.username }}
+        <br>
+        <label>Password</label>
+        <br>
+        {{ form.password }}
+
+        <br>
+        <input style="margin-top: 20px;"class="input_button" type="submit" value="Login">
+
+        {{ form.errors }}
+
+        <p>Don't have an account?</p>
+        <a style="font-size:17px;" href="#">Create an account</a>
+      </form>
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+</body>
