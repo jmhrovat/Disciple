@@ -1,7 +1,22 @@
 {% load static %}
 
-<h1>Homepage</h1>
+<!DOCTYPE html>
 
-<img src="{% static 'base/logo.png'%}" alt="">
+<!-- Main CSS File -->
+<link rel="stylesheet" href= {% static "base/css/styles.css"%}>
 
-<a href="{% url 'login' %}">Click here to log in!</a>
+<body>
+
+  <div class="flexbox">
+    <div class="content">
+      <img class="logo"src="{% static 'base/logo.png'%}" alt="logo">
+      <h1>Disciple</h1>
+      <a class="button" href="{% url 'login' %}">Try Free</a>
+    </div>
+
+
+  </div>
+
+
+
+</body>
