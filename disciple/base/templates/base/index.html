@@ -1,3 +1,27 @@
-<h1>Homepage</h1>
+{% load static %}
 
-<a href="{% url 'login' %}">Click here to log in!</a>
+<!DOCTYPE html>
+
+<!-- Main CSS File -->
+<link rel="stylesheet" href= {% static "base/css/styles.css"%}>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+
+<body>
+
+  <div class="flexbox">
+    <div class="content">
+      <img class="logo"src="{% static 'base/logo.jpg'%}" alt="logo">
+      <h1>Disciple</h1>
+      <a class="button" href="#">Try Free</a>
+      <a class="ghost_button" href="{% url 'login' %}">Log In</a>
+
+    </div>
+
+
+  </div>
+
+
+
+</body>
