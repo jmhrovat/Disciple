@@ -121,4 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/admin'
+LOGIN_REDIRECT_URL = 'user_home'
+LOGOUT_REDIRECT_URL = 'homepage'
+
+LOGIN_URL = 'login'
