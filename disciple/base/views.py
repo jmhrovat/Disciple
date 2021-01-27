@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
-def portal(request):
-
-    return render(request, 'base/portal/index.html')
+def homepage(request):
+    if request.user.is_authenticated:
+        return redirect('user_home')
+    else:
+        return render(request, 'base/index.html')
