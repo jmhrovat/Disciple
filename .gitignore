@@ -1,2 +1,3 @@
 
 disciple/disciple/local_settings.py
+*.pyc
