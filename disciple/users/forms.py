@@ -13,3 +13,4 @@ class SignUpForm(forms.Form):
     last_name = forms.CharField(widget=forms.TextInput(attrs={'class':'input_field '}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'input_field '}))
     # password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'input_field '}))
+    

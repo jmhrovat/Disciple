@@ -42,9 +42,9 @@ def register(request):
                 return redirect('homepage')
             return redirect('register')
     else:
-        f = SignUpForm()
+        form = SignUpForm()
 
-    return render(request, 'registration/register.html', {'form': f})
+    return render(request, 'registration/register.html', {'form': form})
 
 
 @login_required
