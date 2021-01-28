@@ -36,7 +36,7 @@ def register(request):
                 )
                 user.set_password(password)
                 user.save()
-                Profile.objects.create(user=user).save()
+                # Profile.objects.create(user=user).save()
 
                 login(request, user)
                 return redirect('homepage')
