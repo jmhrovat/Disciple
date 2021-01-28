@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 def register(request):
     if request.user.is_authenticated:
-        return redirect('user_home')
+        return redirect('bible_navigation')
 
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -23,7 +23,7 @@ def register(request):
 
             if user:
                 login(request, user)
-                return redirect('user_home')
+                return redirect('bible_navigation')
 
     else:
         form = SignUpForm()

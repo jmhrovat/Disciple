@@ -41,6 +41,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'base',
     'users',
+    'bible',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -135,7 +136,7 @@ MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-LOGIN_REDIRECT_URL = 'user_home'
+LOGIN_REDIRECT_URL = 'bible_navigation'
 LOGOUT_REDIRECT_URL = 'homepage'
 
 LOGIN_URL = 'login'
