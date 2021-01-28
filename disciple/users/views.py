@@ -52,5 +52,5 @@ def user_home_view(request):
     context = {
         'user': request.user
     }
-    return render(request, 'users/home.html')
+    return render(request, 'users/home.html', context)
 
