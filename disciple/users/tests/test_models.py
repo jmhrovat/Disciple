@@ -19,7 +19,5 @@ class TestModels(TestCase):
     def test_profile_created_on_user_save(self):
         try:
             test_profile = Profile.objects.get(user=self.test_user)
-        except:
-            pass
 
         self.assertEquals(test_profile.__str__(), "Doe, John")
