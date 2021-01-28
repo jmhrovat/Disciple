@@ -15,6 +15,9 @@ class TestModels(TestCase):
         )
         self.test_user.save()
 
+        profile = Profile.objects.get(user=self.test_user)
+
+        self.assertEquals(profile.__str__(), "Doe, John")
 
     def test_profile_created_on_user_save(self):
         try:
