@@ -1,0 +1,7 @@
+<h1>{{ chapter }}</h1>
+
+{% for verse in object_list %}
+
+  <p>{{ verse.index }} {{ verse.kjv_text }}</p>
+
+{% endfor %}

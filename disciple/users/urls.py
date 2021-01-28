@@ -7,7 +7,6 @@ from users.forms import LoginForm
 
 
 urlpatterns = [
-     path('', include('bible.urls')),
      path('register', views.register, name='register'),
      path('login', LoginView.as_view(authentication_form=LoginForm), name='login'),
      path('logout', LogoutView.as_view(), name='logout')

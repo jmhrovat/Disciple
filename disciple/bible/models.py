@@ -13,3 +13,11 @@ class Chapter(models.Model):
 
     def __str__(self):
         return self.book.title + " " + str(self.index)
+
+class Verse(models.Model):
+    chapter = models.ForeignKey(Chapter, on_delete=models.CASCADE, related_name="verse_set")
+    index = models.IntegerField()
+    kjv_text = models.CharField(max_length = 1000)
+
+    def __str__(self):
+        return self.chapter.__str__() + ":" + str(self.index)
