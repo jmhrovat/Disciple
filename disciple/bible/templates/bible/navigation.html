@@ -1,0 +1,20 @@
+<h1>Bible Navigation</h1>
+
+
+
+
+{% for book in book_list %}
+
+  <h2>{{ book.book }}</h2>
+
+  {% for chapter in book.chapter_set %}
+
+    <a href="{% url 'read_chapter' chapter_id=chapter.id %}">{{ chapter }}</a>
+
+  {% endfor %}
+
+{% endfor %}
+
+<br>
+
+<a href="{% url 'logout' %}">Logout</a>

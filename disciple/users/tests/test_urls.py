@@ -16,7 +16,5 @@ class UrlTestCase(SimpleTestCase):
         url = reverse('logout')
         self.assertEquals(resolve(url).func.view_class, LogoutView)
 
-    def test_user_home_url_resolved(self):
-        url = reverse('user_home')
-        self.assertEquals(resolve(url).func, user_home_view)
+
 
