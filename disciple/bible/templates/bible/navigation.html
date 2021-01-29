@@ -9,7 +9,7 @@
 
   {% for chapter in book.chapter_set %}
 
-    {{ chapter }}
+    <a href="{% url 'read_chapter' chapter_id=chapter.id %}">{{ chapter }}</a>
 
   {% endfor %}
 
