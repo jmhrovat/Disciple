@@ -1,7 +1,68 @@
-<h1>{{ chapter }}</h1>
+{% load static %}
 
-{% for verse in object_list %}
+<!DOCTYPE html>
 
-  <p>{{ verse.index }} {{ verse.kjv_text }}</p>
+<!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-{% endfor %}
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href= {% static "base/css/styles.css"%}>
+
+  <body>
+  <div class="container">
+    <div class="scripture">
+      <h1>{{ chapter }}</h1>
+      {% for verse in object_list %}
+
+        <p class="verse" isActive='false'>{{ verse.index }} {{ verse.kjv_text }}</p>
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+
+  <div class="form_controls_container">
+
+    <button class="highlight_btn bible_form_button">
+      Aa
+    </button>
+
+    <button class="journal_btn bible_form_button">
+      Bb
+    </button>
+  </div>
+
+  </body>
+  <script>
+  $(document).ready(function() {
+
+    $( ".verse" ).click(function(){
+      if ($(this).attr("isactive") == 'false') {
+        $(this).attr('isactive', 'true');
+        $(this).css("text-decoration","underline");
+      } else {
+        $(this).attr('isactive', 'false')
+        $(this).css("text-decoration","none");
+      }
+    })
+  });
+  </script>
+
+</html>

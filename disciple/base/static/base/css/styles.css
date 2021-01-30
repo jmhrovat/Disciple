@@ -1,13 +1,12 @@
 
 h1 {
-  color: #5C5C66;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lota', sans-serif;
 }
 
 body {
   text-align: center;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lota', sans-serif;
 }
 
 .flexbox {
@@ -104,4 +103,52 @@ input .button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   cursor: pointer;
+}
+
+.scripture {
+  color: #121212;
+  text-align: left;
+  font-size: 17px;
+}
+
+.scripture h1 {
+  font-size: 22px;
+}
+
+.scripture p {
+  font-size: 17px;
+  line-height: 27.5px;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.form_controls_container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bible_form_button {
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  bottom: 30px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.highlight_btn {
+  color: white;
+  background-color: #B53EFF;
+}
+
+.journal_btn {
+  background-color: white;
 }
