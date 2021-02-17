@@ -1,36 +1,121 @@
+
+<!doctype html>
+
 {% load static %}
 
-<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<!-- Main CSS File -->
-<link rel="stylesheet" href= {% static "base/css/styles.css"%}>
+    <link rel="stylesheet" href="{% static 'base/css/styles.css'%}">
+    <title>Disciplia: Online Discipleship Tools</title>
 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="{% static 'base/logo.svg'%}"/>
 
 
-<body>
 
-  <div class="flexbox">
-    <div class="content">
-      <img class="logo"src="{% static 'base/logo.jpg'%}" alt="logo">
-      <h1>Disciple</h1>
-      <a class="button" href="{% url 'register' %}">Try Free</a>
-      <a class="ghost_button" href="{% url 'login' %}">Log In</a>
+  </head>
+  <body>
 
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <img src="{% static 'base/disciplia_logo.png'%}" style="margin-right:0px;" class="navbar-brand" href="#" alt="Disciplia Logo"></img>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <h1 class="brand_text">Guide your church to a deeper faith</h1>
+          <p style="margin-top:40px; margin-bottom:40px;">Software that makes real discipleship the center of your church. Take your members through scripture, increase spiritual engagement, and help your people grow closer to Jesus 🙌</p>
+          <button type="button" name="button" class="btn btn-primary">Get Disciplia Free</button>
+        </div>
+        <div class="col-md-6 text-center">
+          <img class="image" src="{% static 'base/iphone.png'%}" alt="A preview of Disciplia running on iPhone"></img>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-center text-sm-left">
+          <h1>Intentional Growth</h1>
+          <p>Make your Discipleship Intentional. Disciplia gives your members the plan they need to move through God’s Word and see real progress.</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="{% static 'base/typing.png'%}" alt="A graphic of a woman typing on her laptop">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-center text-sm-left">
+          <h1>Increase Bible Engagement</h1>
+          <p>God’s Word is the center piece of Disciplia. See everyone’s reading progress in one location.</p>
+        </div>
+        <div class="col-md-6 text-center text-sm-right">
+          <img src="{% static 'base/reading.png'%}" alt="A graphic of a man reading his Bible">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-center text-sm-left">
+          <h1>Accountable together</h1>
+          <p>God designed discipleship to be relational. Disciplia leverages Group Accountability to help everyone grow better and faster.</p>
+        </div>
+
+        <div class="col-md-6 text-center text-sm-left">
+          <img src="{% static 'base/collaborate.png'%}" alt="A graphic of a man and woman working on an iPhone screen together">
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container-fluid cta_container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Start for Free</h1>
+          <p>Disciplia is free for individuals and groups of up to 10 people. Get started today, and invite your friends to start growing in God’s Word together.</p>
+          <button type="button" name="button" class="btn btn-primary">Get Disciplia Free</button>
+        </div>
+
+      </div>
     </div>
 
 
-  </div>
 
 
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
 
-</body>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
