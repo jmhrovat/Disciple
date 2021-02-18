@@ -12,15 +12,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="{% static 'base/css/styles.css'%}">
     <title>Disciplia: Online Discipleship Tools</title>
 
     <link rel="icon" type="image/svg" href="{% static 'base/logo.svg'%}"/>
 
-
-
   </head>
-  <body>
+  <body style="background-color:#FBFBFB">
 
     <nav class="navbar navbar-expand-lg navbar-light">
       <img src="{% static 'base/disciplia_logo.png'%}" style="margin-right:0px;" class="navbar-brand" href="#" alt="Disciplia Logo"></img>
@@ -50,60 +52,46 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-6 text-center">
-          <h1 class="brand_text">Guide your church to a deeper faith</h1>
-          <p style="margin-top:40px; margin-bottom:40px;">Software that makes real discipleship the center of your church. Take your members through scripture, increase spiritual engagement, and help your people grow closer to Jesus 🙌</p>
-          <a type="button" name="button" class="btn btn-primary">Get Disciplia Free</a>
-        </div>
-        <div class="col-md-6 text-center">
-          <img class="image" src="{% static 'base/iphone.png'%}" alt="A preview of Disciplia running on iPhone"></img>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 text-center text-sm-left">
-          <h1>Intentional Growth</h1>
-          <p>Make your Discipleship Intentional. Disciplia gives your members the plan they need to move through God’s Word and see real progress.</p>
-        </div>
-        <div class="col-md-6 text-center">
-          <img src="{% static 'base/typing.png'%}" alt="A graphic of a woman typing on her laptop">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 text-center text-sm-left">
-          <h1>Increase Bible Engagement</h1>
-          <p>God’s Word is the center piece of Disciplia. See everyone’s reading progress in one location.</p>
-        </div>
-        <div class="col-md-6 text-center text-sm-right">
-          <img src="{% static 'base/reading.png'%}" alt="A graphic of a man reading his Bible">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 text-center text-sm-left">
-          <h1>Accountable together</h1>
-          <p>God designed discipleship to be relational. Disciplia leverages Group Accountability to help everyone grow better and faster.</p>
-        </div>
-
-        <div class="col-md-6 text-center text-sm-left">
-          <img src="{% static 'base/collaborate.png'%}" alt="A graphic of a man and woman working on an iPhone screen together">
-        </div>
-
-
-      </div>
-    </div>
-
-    <div class="container-fluid cta_container">
-      <div class="row">
         <div class="col-12 text-center">
-          <h1>Start for Free</h1>
-          <p>Disciplia is free for individuals and groups of up to 10 people. Get started today, and invite your friends to start growing in God’s Word together.</p>
-          <a type="button" name="button" class="btn btn-primary">Get Disciplia Free</a>
+          <h1 class="brand_text">Let's Grow Together</h1>
+          <p style="font-size:1.2em;">Disciplia scales with your Church. Create a free individual account to try out all our features, and invite up to 10 of your friends to experience mutual discipleship.</p>
         </div>
+      </div>
 
+      <div class="row">
+        <div class="col-12">
+          <div id="price_card" class="card text-center justify-content-center">
+            <h2 class="card-title"><span id="price_amount">$0.00</span><span id="per_month">/month</span></h2>
+            <p id="pricing_information" class="card-text">Individual Plans are Free Forever. Create your free account to get started!</p>
+            <a class="btn" href="#">Get Disciplia for Free</a>
+          </div>
+
+
+          <br>
+
+          <div id="price_tool">
+            <button
+              id="pricing_tool_decrease"
+              class="btn"
+              type="button"
+              name="button"
+              >-</button>
+            <div
+              id="pricing_tool_text"
+              type="button"
+              name="button"
+              >Just Me</div>
+            <button
+              id="pricing_tool_increase"
+              class="btn"
+              type="button"
+              name="button"
+              >+</button>
+
+          </div>
+        </div>
       </div>
     </div>
-
-
-
 
 
     <!-- Optional JavaScript -->
@@ -112,10 +100,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
     <script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous">
+    </script>
 
+    <script>
+      $(document).ready(function () {
+
+        var pricing_tool_index = 0;
+
+        function price_increase() {
+          pricing_tool_index++;
+          alert(pricing_tool_index);
+        };
+
+        $( "#pricing_tool_increase" ).click(function() {
+
+          price_increase()
+          ($("#pricing_tool_text").text(
+            "Me and 10 Friends"
+          ));
+          $("#pricing_information").text(
+            "Still free! Invite up to 10 of your friends to Disciplia. Free is pretty cool, right?"
+          );
+        });
+      });
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
