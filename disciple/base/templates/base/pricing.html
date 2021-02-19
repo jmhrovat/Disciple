@@ -1,0 +1,168 @@
+
+<!doctype html>
+
+{% load static %}
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static 'base/css/styles.css'%}">
+    <title>Disciplia: Online Discipleship Tools</title>
+
+    <link rel="icon" type="image/svg" href="{% static 'base/logo.svg'%}"/>
+
+  </head>
+  <body style="background-color:#FBFBFB">
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <img src="{% static 'base/disciplia_logo.png'%}" style="margin-right:0px;" class="navbar-brand" href="#" alt="Disciplia Logo"></img>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+
+
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="brand_text">Let's Grow Together</h1>
+          <p style="font-size:1.2em;">Disciplia scales with your Church. Create a free individual account to try out all our features, and invite up to 10 of your friends to experience mutual discipleship.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div id="price_card" class="card text-center justify-content-center">
+            <h2 class="card-title"><span id="price_amount">$0.00</span><span id="per_month">/month</span></h2>
+            <p id="pricing_information" class="card-text">Individual Plans are Free Forever. Create your free account to get started!</p>
+            <a class="btn" href="#">Get Disciplia for Free</a>
+          </div>
+
+
+          <br>
+
+          <div id="price_tool">
+            <button
+              id="pricing_tool_decrease"
+              class="btn"
+              type="button"
+              name="button"
+              >-</button>
+            <div
+              id="pricing_tool_text"
+              type="button"
+              name="button"
+              >Just Me</div>
+            <button
+              id="pricing_tool_increase"
+              class="btn"
+              type="button"
+              name="button"
+              >+</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+      $(document).ready(function () {
+
+        var pricing_tool_index = 0;
+        var pricing_tool_text = $("#pricing_tool_text");
+        var price_amount = $("#price_amount");
+        var pricing_information = $("#pricing_information");
+
+        function render_prices() {
+          switch (pricing_tool_index) {
+            case 0:
+              pricing_tool_text.text("Just me");
+              price_amount.text("$0.00")
+              pricing_information.text("Individual Plans are Free Forever. Create your free account to get started!");
+              break;
+            case 1:
+              pricing_tool_text.text("Me and 9 Friends");
+              price_amount.text("$0.00");
+              pricing_information.text("Still free! Invite up to 10 of your friends to Disciplia. Free is pretty cool, right?");
+              break
+            case 2:
+              pricing_tool_text.text("Me and 99 Friends");
+              price_amount.text("$12.99")
+              pricing_information.text("100 members on the same Church account costs $12.99 per month.");
+            default:
+              pricing_tool_text.text(
+                ((pricing_tool_index - 1) * 100) + " Church Members"
+              );
+              price_amount.text(
+                ("$"+((pricing_tool_index - 1) * 12.99).toFixed(2))
+              )
+              pricing_information.text("Every additional 100 members costs $12.99 per month.");
+
+          };
+        };
+
+        function price_increase() {
+          pricing_tool_index++;
+          render_prices()
+        };
+
+        function price_decrease() {
+          if (pricing_tool_index > 0) {
+            pricing_tool_index--;
+          };
+          render_prices()
+        }
+
+        $( "#pricing_tool_increase" ).click(function() {
+          price_increase()
+        });
+
+        $( "#pricing_tool_decrease" ).click(function() {
+          price_decrease()
+        });
+
+      });
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

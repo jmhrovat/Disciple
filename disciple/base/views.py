@@ -6,3 +6,6 @@ def homepage(request):
         return redirect('bible_navigation')
     else:
         return render(request, 'base/index.html')
+
+def pricing(request):
+    return render(request, 'base/pricing.html')
