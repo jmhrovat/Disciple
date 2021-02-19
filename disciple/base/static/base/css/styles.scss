@@ -108,10 +108,13 @@ h1, .h1 {
 #price_card {
   padding-top: 25px;
   padding-bottom: 25px;
+  height: 300px;
+  
 
   p {
     margin: auto;
     margin-top: 5px;
+    margin-bottom: 0px;
     text-align: center;
     max-width: 400px;
   }
@@ -119,7 +122,6 @@ h1, .h1 {
   .btn  {
     width: 250px;
     margin: auto;
-    margin-top: 50px;
     color: white;
   }
 }
