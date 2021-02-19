@@ -1,0 +1,84 @@
+body {
+  background-color: #F5F5F5; }
+
+.row {
+  margin: 0; }
+
+.profile_img {
+  display: inline-block;
+  width: 20%;
+  height: 50px;
+  background-color: red; }
+
+.profile_content {
+  width: 80%;
+  height: 50px;
+  display: inline-block;
+  background-color: blue; }
+
+.tasks_section {
+  background-color: white;
+  height: 300px;
+  width: 100%; }
+  .tasks_section button {
+    height: 50px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    border: none;
+    display: block;
+    margin: 0 auto; }
+
+.header_text {
+  display: inline-block;
+  height: 55px;
+  width: 60%;
+  background-color: red; }
+
+.status_icon {
+  display: inline-block;
+  height: 55px;
+  width: 40%;
+  background-color: blue; }
+
+.content_title {
+  display: inline-block;
+  height: 55px;
+  width: 40%;
+  background-color: blue; }
+
+.streak_section {
+  display: inline-block;
+  height: 55px;
+  width: 60%;
+  background-color: red; }
+
+.task_items li {
+  height: 30px;
+  width: 30px;
+  background-color: grey;
+  margin-bottom: 10px; }
+
+.calendar_section {
+  margin: 0 auto;
+  width: 80%; }
+
+.calendar_days_header {
+  display: inline-block;
+  width: 40px;
+  height: 40px; }
+
+.calendar_days {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid black; }
+
+.metric_card {
+  height: 100px;
+  width: 100%;
+  background-color: blue;
+  margin-top: 15px;
+  border-radius: 10px; }
+
+/*# sourceMappingURL=styles.css.map */
