@@ -109,22 +109,58 @@
       $(document).ready(function () {
 
         var pricing_tool_index = 0;
+        var pricing_tool_text = $("#pricing_tool_text");
+        var price_amount = $("#price_amount");
+        var pricing_information = $("#pricing_information");
+
+        function render_prices() {
+          switch (pricing_tool_index) {
+            case 0:
+              pricing_tool_text.text("Just me");
+              price_amount.text("$0.00")
+              pricing_information.text("Individual Plans are Free Forever. Create your free account to get started!");
+              break;
+            case 1:
+              pricing_tool_text.text("Me and 9 Friends");
+              price_amount.text("$0.00");
+              pricing_information.text("Still free! Invite up to 10 of your friends to Disciplia. Free is pretty cool, right?");
+              break
+            case 2:
+              pricing_tool_text.text("Me and 99 Friends");
+              price_amount.text("$12.99")
+              pricing_information.text("100 members on the same Church account costs $12.99 per month.");
+            default:
+              pricing_tool_text.text(
+                ((pricing_tool_index - 1) * 100) + " Church Members"
+              );
+              price_amount.text(
+                ("$"+((pricing_tool_index - 1) * 12.99).toFixed(2))
+              )
+              pricing_information.text("Every additional 100 members costs $12.99 per month.");
+
+          };
+        };
 
         function price_increase() {
           pricing_tool_index++;
-          alert(pricing_tool_index);
+          render_prices()
         };
 
-        $( "#pricing_tool_increase" ).click(function() {
+        function price_decrease() {
+          if (pricing_tool_index > 0) {
+            pricing_tool_index--;
+          };
+          render_prices()
+        }
 
+        $( "#pricing_tool_increase" ).click(function() {
           price_increase()
-          ($("#pricing_tool_text").text(
-            "Me and 10 Friends"
-          ));
-          $("#pricing_information").text(
-            "Still free! Invite up to 10 of your friends to Disciplia. Free is pretty cool, right?"
-          );
         });
+
+        $( "#pricing_tool_decrease" ).click(function() {
+          price_decrease()
+        });
+
       });
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

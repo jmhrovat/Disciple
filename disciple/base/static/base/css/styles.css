@@ -92,7 +92,8 @@ h1, .h1 {
   #price_card .btn {
     width: 250px;
     margin: auto;
-    margin-top: 50px; }
+    margin-top: 50px;
+    color: white; }
 
 #price_tool {
   text-align: center; }
