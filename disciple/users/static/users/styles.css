@@ -59,26 +59,54 @@ body {
   background-color: grey;
   margin-bottom: 10px; }
 
+.calendar_container {
+  background-color: white;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  margin-top: 20px; }
+
 .calendar_section {
-  margin: 0 auto;
-  width: 80%; }
+  background-color: white;
+  width: 315px;
+  margin: auto; }
+  .calendar_section h1 {
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: right;
+    width: 320px;
+    margin-bottom: 10px; }
+  .calendar_section th {
+    text-align: center;
+    width: 14.285%;
+    font-size: 14px; }
+  .calendar_section td {
+    font-size: 14px;
+    width: 45px;
+    height: 45px;
+    text-align: center; }
 
-.calendar_days_header {
-  display: inline-block;
-  width: 40px;
-  height: 40px; }
-
-.calendar_days {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border: 2px solid black; }
+.completed_date {
+  vertical-align: middle;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: #AF2EFF;
+  color: white;
+  border: red #AF2EFF 3px;
+  border-radius: 100%;
+  margin: 0 auto; }
 
 .metric_card {
+  max-width: 335px;
   height: 100px;
   width: 100%;
   background-color: blue;
   margin-top: 15px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
