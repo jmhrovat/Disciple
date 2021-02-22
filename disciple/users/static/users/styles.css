@@ -1,63 +1,120 @@
 body {
   background-color: #F5F5F5; }
 
-.row {
-  margin: 0; }
+.profile_section {
+  background-color: white;
+  height: 87px;
+  width: 100%; }
 
-.profile_img {
+.profile_img_wrapper {
   display: inline-block;
   width: 20%;
-  height: 50px;
-  background-color: red; }
+  line-height: 87px; }
+  .profile_img_wrapper img {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 26px;
+    margin-left: 10px; }
 
-.profile_content {
-  width: 80%;
-  height: 50px;
+.profile_wrapper {
+  padding-top: 17px;
+  height: 87px;
+  width: 60%;
   display: inline-block;
-  background-color: blue; }
+  padding-left: 5px; }
+  .profile_wrapper h1 {
+    font-size: 24px;
+    margin: 0; }
+  .profile_wrapper p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 20px;
+    vertical-align: middle; }
+    .profile_wrapper p img {
+      display: inline-block;
+      height: 12px;
+      width: 12px; }
+
+.row {
+  margin: 0; }
 
 .tasks_section {
   background-color: white;
   height: 300px;
-  width: 100%; }
+  width: 100%;
+  margin-top: 15px; }
   .tasks_section button {
     height: 50px;
     width: 200px;
-    background-color: black;
-    color: white;
     border: none;
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-top: 25px; }
+
+.button {
+  background-color: #AF2EFF;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px; }
+
+ol li {
+  list-style-type: none; }
+  ol li img {
+    margin-right: 5px; }
+
+ol {
+  padding-left: 30px; }
 
 .header_text {
   display: inline-block;
   height: 55px;
   width: 60%;
-  background-color: red; }
+  background-color: white; }
+  .header_text h1 {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0px; }
+  .header_text p {
+    margin-left: 10px;
+    color: #5C5C66; }
 
 .status_icon {
   display: inline-block;
   height: 55px;
-  width: 40%;
-  background-color: blue; }
+  width: 40%; }
+  .status_icon h1 {
+    margin-top: 22px;
+    float: right;
+    margin-right: 15px;
+    width: 84px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    background-color: #AF2EFF;
+    color: white;
+    border-radius: 30px; }
 
 .content_title {
   display: inline-block;
   height: 55px;
-  width: 40%;
-  background-color: blue; }
+  width: 40%; }
+  .content_title h1 {
+    margin-left: 10px;
+    font-size: 33px; }
 
 .streak_section {
   display: inline-block;
   height: 55px;
-  width: 60%;
-  background-color: red; }
-
-.task_items li {
-  height: 30px;
-  width: 30px;
-  background-color: grey;
-  margin-bottom: 10px; }
+  width: 60%; }
+  .streak_section p {
+    margin-right: 15px;
+    margin-top: 15px;
+    text-align: right;
+    font-size: 15px;
+    color: #5C5C66; }
 
 .calendar_container {
   background-color: white;
@@ -69,7 +126,7 @@ body {
   background-color: white;
   width: 315px;
   margin: auto; }
-  .calendar_section h1 {
+  .calendar_section h2 {
     padding-top: 10px;
     padding-right: 10px;
     font-size: 2em;
@@ -89,24 +146,45 @@ body {
 
 .completed_date {
   vertical-align: middle;
-  line-height: 30px;
-  width: 30px;
-  height: 30px;
+  line-height: 34px;
+  width: 35px;
+  height: 35px;
   background-color: #AF2EFF;
   color: white;
-  border: red #AF2EFF 3px;
   border-radius: 100%;
   margin: 0 auto; }
 
 .metric_card {
+  min-width: 290px;
   max-width: 335px;
-  height: 100px;
+  height: 80px;
   width: 100%;
-  background-color: blue;
-  margin-top: 15px;
+  background-color: white;
   border-radius: 10px;
   display: block;
-  margin: auto;
-  margin-top: 20px; }
+  margin: 25px auto 0px auto;
+  padding: 0px; }
+  .metric_card .img_wrapper {
+    display: inline-block;
+    height: 100%;
+    width: 20%; }
+    .metric_card .img_wrapper img {
+      margin-bottom: 30px;
+      margin-left: 20px; }
+  .metric_card .content_wrapper {
+    margin-top: 15px;
+    display: inline-block;
+    height: 100%;
+    width: 75%; }
+  .metric_card .content {
+    display: inline-block; }
+  .metric_card h2 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0px; }
+  .metric_card p {
+    font-size: 18px;
+    margin-bottom: 0px;
+    color: #5C5C66; }
 
 /*# sourceMappingURL=styles.css.map */
