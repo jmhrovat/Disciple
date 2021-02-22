@@ -33,7 +33,9 @@ SECRET_KEY = secret_key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = ['192.168.1.212'] Launch with 0.0.0.0:8000 for mobile testing
 ALLOWED_HOSTS = []
+
 
 
 # Application definition

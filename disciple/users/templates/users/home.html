@@ -1,3 +1,164 @@
-<h1>Welcome, {{ user.first_name}}!</h1>
 
-<a href="{% url 'logout' %}">Log Out</a>
+<!doctype html>
+
+{% load static %}
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'users/styles.css'%}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Disciplia: Online Discipleship Tools</title>
+
+    <link rel="icon" type="image/svg" href="{% static 'base/logo.svg'%}"/>
+
+    <link rel="apple-touch-icon" href="{% static 'users/img/apple-touch-icon.png'%}">
+  </head>
+
+<body>
+
+
+
+<div class="fluid-container profile_section">
+  <div class="row no-gutters">
+    <div class="col-12 ">
+      <div class="profile_img_wrapper">
+        <img src="{% static 'users/img/avatar_icon.png' %}"></img>
+      </div>
+      <div class="profile_wrapper">
+        <h1>Jonathan Hrovat</h1>
+        <p><img style="margin-bottom: 3px;"src="{% static 'users/img/online.svg' %}"></img> Online</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fluid-container tasks_section">
+  <div class="row">
+    <div class="header_text">
+      <h1>Bible in a Year</h1>
+      <p>Day 1 of 364</p>
+    </div>
+    <div class="status_icon">
+      <h1>On Track</h1>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="content_title">
+      <h1>Todo</h1>
+    </div>
+    <div class="streak_section">
+      <p>Streak of 0 Days  <img src="{% static 'users/img/streak_small.svg' %}"></img></p>
+    </div>
+  </div>
+  <div class="row task_items">
+    <ol>
+      <li><img src="{% static 'users/img/pending.svg' %}"></img>Genesis 1</li>
+      <li><img src="{% static 'users/img/pending.svg' %}"></img>Genesis 2</li>
+    </ol>
+  </div>
+
+  <button class="button" type="button" name="button">Start Reading</button>
+</div>
+
+
+<div class="fluid-container calendar_container">
+  <div class="calendar_section">
+    <h2>February 2021</h2>
+
+    <table>
+      <tr>
+        <th>Su</th>
+        <th>Mo</th>
+        <th>Tu</th>
+        <th>We</th>
+        <th>Th</th>
+        <th>Fr</th>
+        <th>Sa</th>
+      </tr>
+
+      <tr>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+      </tr>
+      <tr>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+      </tr>
+      <tr>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+      </tr>
+      <tr>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+      </tr>
+      <tr>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+        <td><div class="completed_date">#<div></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 no-gutters metric_card">
+      <div class="img_wrapper">
+        <img src="{% static 'users/img/streak_large.svg'%}" alt="">
+      </div>
+      <div class="content_wrapper">
+        <h2>Longest Streak</h2>
+        <p>0 Days</p>
+      </div>
+
+    </div>
+    <div class="col-12 no-gutters metric_card">
+      <div class="img_wrapper">
+        <img src="{% static 'users/img/calendar.svg'%}" alt="">
+      </div>
+      <div class="content_wrapper">
+        <h2>Completion Date</h2>
+        <p>February 12, 2022</p>
+      </div>
+  </div>
+</div>
+
+<br>
+
+</body>
+</html>
