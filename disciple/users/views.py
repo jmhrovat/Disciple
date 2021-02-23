@@ -38,3 +38,10 @@ def user_home_view(request):
     }
     return render(request, 'users/home.html', context)
 
+@login_required
+def members(request):
+    context = {
+        'user': request.user
+    }
+    return render(request, 'users/members.html', context)
+
