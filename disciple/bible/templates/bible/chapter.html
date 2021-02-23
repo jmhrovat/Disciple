@@ -24,45 +24,25 @@
   <!-- Main CSS File -->
   <link rel="stylesheet" href= {% static "base/css/styles.css"%}>
 
-  <body>
+  <body class="scripture">
+
+  <div class="header">
+    <h1><span class="section">{{ chapter }}</span><span class="version">KJV</span></h1>
+  </div>
+
+<div class="progress_bar"></div>
+
   <div class="container">
-    <div class="scripture">
-      <h1>{{ chapter }}</h1>
       {% for verse in object_list %}
 
         <p class="verse" isActive='false'>{{ verse.index }} {{ verse.kjv_text }}</p>
 
       {% endfor %}
-    </div>
 
   </div>
 
 
-  <div class="form_controls_container">
 
-    <button class="highlight_btn bible_form_button">
-      Aa
-    </button>
-
-    <button class="journal_btn bible_form_button">
-      Bb
-    </button>
-  </div>
 
   </body>
-  <script>
-  $(document).ready(function() {
-
-    $( ".verse" ).click(function(){
-      if ($(this).attr("isactive") == 'false') {
-        $(this).attr('isactive', 'true');
-        $(this).css("text-decoration","underline");
-      } else {
-        $(this).attr('isactive', 'false')
-        $(this).css("text-decoration","none");
-      }
-    })
-  });
-  </script>
-
 </html>
