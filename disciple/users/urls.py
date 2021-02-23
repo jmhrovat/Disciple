@@ -9,6 +9,7 @@ from users.forms import LoginForm
 urlpatterns = [
      path('register', views.register, name='register'),
      path('', views.user_home_view, name='user_home_view'),
+     path('members', views.members, name='members'),
      path('login', LoginView.as_view(authentication_form=LoginForm), name='login'),
      path('logout', LogoutView.as_view(), name='logout')
 ]

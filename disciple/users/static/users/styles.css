@@ -187,4 +187,62 @@ ol {
     margin-bottom: 0px;
     color: #5C5C66; }
 
+.members_header {
+  background-color: white;
+  padding-left: 10px; }
+  .members_header h1 {
+    line-height: 60px;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 0; }
+
+.members_list {
+  background-color: white; }
+  .members_list .col-12 {
+    height: 60px;
+    border-top: 1px solid #DDE0ED;
+    padding: 0; }
+    .members_list .col-12 .picture_wrapper {
+      height: 60px;
+      width: 15%;
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      line-height: 60px; }
+      .members_list .col-12 .picture_wrapper img {
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        vertical-align: middle;
+        line-height: 60px; }
+    .members_list .col-12 .content_wrapper {
+      vertical-align: top;
+      width: 75%;
+      height: 60px;
+      display: inline-block;
+      line-height: 60px; }
+    .members_list .col-12 h1 {
+      font-size: 17px;
+      line-height: 17px;
+      margin-top: 14px;
+      margin-bottom: 2px;
+      display: block;
+      width: auto; }
+    .members_list .col-12 p {
+      line-height: 15px;
+      font-size: 15px;
+      margin-bottom: 10;
+      display: block;
+      width: auto;
+      color: #5C5C66; }
+    .members_list .col-12 .status_wrapper {
+      vertical-align: top;
+      display: inline-block;
+      height: 60px;
+      width: 5%; }
+      .members_list .col-12 .status_wrapper img {
+        margin-top: 22px;
+        vertical-align: middle;
+        line-height: 60px; }
+
 /*# sourceMappingURL=styles.css.map */
