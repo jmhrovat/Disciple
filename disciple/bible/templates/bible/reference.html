@@ -35,7 +35,7 @@
   <div class="container">
       {% for verse in object_list %}
 
-        <p class="verse" isActive='false'>{{ verse.index }} {{ verse.kjv_text }}</p>
+        <p class="verse" isActive='false'>{{ verse.verse.index }} {{ verse.text }}</p>
 
       {% endfor %}
 

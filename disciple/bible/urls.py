@@ -8,5 +8,5 @@ from users.forms import LoginForm
 
 urlpatterns = [
      path('', views.bible_navigation, name='bible_navigation'),
-     path('<int:chapter_id>', ChapterVerseSetView.as_view(), name='read_chapter')
+     path('<str:reference>', ReferenceView.as_view(), name='reference_view')
 ]
