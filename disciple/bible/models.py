@@ -21,11 +21,11 @@ class Chapter(models.Model):
 
 class Verse(models.Model):
     chapter = models.ForeignKey(
-    Chapter,
-    on_delete=models.CASCADE,
-    blank=True,
-    null=True,
-    related_name="verse_set"
+        Chapter,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name="verse_set"
     )
     index = models.IntegerField()
 
@@ -35,10 +35,10 @@ class Verse(models.Model):
 class KJV_Verse(models.Model):
     text = models.CharField(max_length = 1000)
     verse = models.ForeignKey(
-    Verse,
-    on_delete=models.CASCADE,
-    blank=True,
-    null=True,
-    related_name="verse_set"
+        Verse,
+        on_delete=models.CASCADE,
+        blank=True,
+        null=True,
+        related_name="kjv_verse"
     )
 
