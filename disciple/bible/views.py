@@ -29,71 +29,35 @@ def bible_navigation(request):
 
     return render(request, 'bible/navigation.html', context)
 
+def get_reference(reference):
+    reference = reference.split(".")
+    shorthand = reference[0].upper()
+    chapter = int(reference[1])
+
+    return shorthand, chapter
+
 
 class ReferenceView(ListView):
     template_name = 'bible/reference.html'
 
+
     def setup(self, request, reference):
 
-        reference = reference.split(".")
+        shorthand, chapter = get_reference(reference)
 
-        book_ref = reference[0]
-        print()
-
-        if book_ref == "gen":
-            title = "genesis"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "lev":
-            title = "leviticus"
-        elif book_ref == "num":
-            title = "numbers"
-        elif book_ref == "deu":
-            title = "deuteronomy"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-        elif book_ref == "ex":
-            title = "exodus"
-
-
-
-        self.book = Book.objects.get(title=title)
-        self.chapter = Chapter.objects.get(book=self.book, index=int(reference[1]))
+        self.book = Book.objects.get(shorthand=shorthand)
+        self.chapter = Chapter.objects.get(book=self.book, index=chapter)
         self.verses = Verse.objects.filter(chapter=self.chapter)
+
         super(ReferenceView, self).setup(request)
 
     def get_queryset(self):
         queryset = KJV_Verse.objects.filter(verse__in=self.verses)
         return queryset
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ReferenceView, self).get_context_data(*args, **kwargs)
+        context['chapter'] = self.book.title
+        return context
 
 
