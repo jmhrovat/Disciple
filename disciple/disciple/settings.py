@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'base',
     'users',
     'bible',
+    'tasks',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

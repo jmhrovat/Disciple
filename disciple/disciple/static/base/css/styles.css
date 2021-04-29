@@ -6,6 +6,38 @@ html {
     html {
       font-size: 112.5%; } }
 
+.header {
+  border-bottom: 1px solid #DDE0ED;
+  height: 60px; }
+
+.scripture .section {
+  background-color: #EEEEEE;
+  margin-right: 5px;
+  padding: 4px;
+  border-radius: 5px; }
+.scripture .version {
+  background-color: #EEEEEE;
+  margin-left: 5px;
+  padding: 4px;
+  border-radius: 5px; }
+.scripture h1 {
+  line-height: 59px;
+  text-align: center;
+  margin-top: 0px;
+  font-size: 15px;
+  background-color: white;
+  font-weight: 400;
+  margin-bottom: 0px; }
+.scripture p {
+  font-size: 18px;
+  line-height: 28px; }
+
+.progress_bar {
+  height: 10px;
+  width: 30%;
+  background-color: #AF2EFF;
+  margin-bottom: 15px; }
+
 body {
   color: #121212;
   background-color: white;
